@@ -15,7 +15,7 @@ export let rutas=express.Router()
 rutas.get('/viajescomfama/v1/habitaciones',controladorHabitacion.buscarHabitaciones)
 rutas.get('/viajescomfama/v1/habitacion/:id',controladorHabitacion.buscarHabitacionPorId)
 rutas.post('/viajescomfama/v1/habitacion',controladorHabitacion.agregarHabitacion)
-rutas.put('/viajescomfama/v1/habitacion',controladorHabitacion.editarHabitacion)
+rutas.put('/viajescomfama/v1/habitacion/:id',controladorHabitacion.editarHabitacion)
 
 
 

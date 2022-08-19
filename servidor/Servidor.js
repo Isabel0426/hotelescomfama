@@ -1,9 +1,11 @@
 //LLAMAMOS A EXPRESS
 import express from 'express'
+import { conectar } from '../database/conexion.js'
 
 //LLamamos a las RUTAS
 import {rutas} from '../routes/rutas.js'
 
+//llamamos al metodo conectar con bd
 
 export class Servidor{
 
@@ -27,5 +29,7 @@ export class Servidor{
         })
     }
 
-
+    conectarconBD(){
+        conectar()
+    }
 }

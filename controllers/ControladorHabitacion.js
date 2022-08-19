@@ -56,9 +56,14 @@ export class ControladorHabitacion{
 
     //editar habitacion
     editarHabitacion(request,response){
+        //Recibir id como parametro
+        let id=request.params.id
 
+        //Recibir los datos que voy a cambiar
+        let datos=request.body
         try{
-            response.status(200).json({}) 
+            response.status(200).json({mensaje:"exito editando la habitacion"+id,
+            datos:datos}) 
          }catch(error){ //FALLO RESOLVIENDO LA PETICION
              response(400).json({})
          }
